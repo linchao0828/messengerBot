@@ -1,0 +1,76 @@
+definitions:
+  api.BaseResp:
+    properties:
+      code:
+        type: integer
+      data: {}
+      logId:
+        type: string
+      msg:
+        type: string
+    type: object
+  domain.MockOrderSuccessReq:
+    properties:
+      messenger_sender_id:
+        type: string
+      order_id:
+        type: string
+    required:
+    - messenger_sender_id
+    - order_id
+    type: object
+info:
+  contact: {}
+  description: This is messengerBot server.
+  title: messengerBot
+  version: "1.0"
+paths:
+  /api/v1/mp/mock/order_success:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: mock order success request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/domain.MockOrderSuccessReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.BaseResp'
+      summary: mock order success
+      tags:
+      - messenger
+  /api/v1/mp/webhook:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.BaseResp'
+      summary: webhook
+      tags:
+      - messenger
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.BaseResp'
+      summary: webhook
+      tags:
+      - messenger
+swagger: "2.0"

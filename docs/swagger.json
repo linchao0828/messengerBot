@@ -1,0 +1,118 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is messengerBot server.",
+        "title": "messengerBot",
+        "contact": {},
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/v1/mp/mock/order_success": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "messenger"
+                ],
+                "summary": "mock order success",
+                "parameters": [
+                    {
+                        "description": "mock order success request",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/domain.MockOrderSuccessReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/api.BaseResp"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/mp/webhook": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "messenger"
+                ],
+                "summary": "webhook",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/api.BaseResp"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "messenger"
+                ],
+                "summary": "webhook",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/api.BaseResp"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "api.BaseResp": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer"
+                },
+                "data": {},
+                "logId": {
+                    "type": "string"
+                },
+                "msg": {
+                    "type": "string"
+                }
+            }
+        },
+        "domain.MockOrderSuccessReq": {
+            "type": "object",
+            "required": [
+                "messenger_sender_id",
+                "order_id"
+            ],
+            "properties": {
+                "messenger_sender_id": {
+                    "type": "string"
+                },
+                "order_id": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

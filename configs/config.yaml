@@ -1,0 +1,59 @@
+Dev:
+  Port: 8080
+  LogLevel: "debug"
+  DSN: ""
+  Cookie:
+    Domain: ".messengerBot.com"
+  Redis:
+    Addr: "127.0.0.1:16379"
+    Pwd: ""
+    DB: 0
+  OpenAI:
+    AuthKey: "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"
+    ChatCompletionsUrl: "https://api.openai.com/v1/chat/completions"
+    Model: "gpt-3.5-turbo"
+    Temperature: 0.6
+    MaxTokens: 400
+  Messenger:
+    AccessToken: "EAAYrQ9M4yC8BO7DcSu7BQYs3tQqVuLgMLCZCcmA0avoWE19TrwMuv8Rj2GbvibFkct9XsL3o4q9Yq43XRODuVC96cQQcmRpMxNWnU9kdZBuFgotZBHX2EZCty28KbUjD1t4R6iOvaGErBakZAVsYqLZCKpbUlnWOtbw9MXjR2RsYSN4GXSJgxNxyHtXw7WkRZBV"
+    VerifyToken: "hello"
+
+Test:
+  Port: 8080
+  LogLevel: "debug"
+  DSN: ""
+  Cookie:
+    Domain: ".messengerBot.com"
+  Redis:
+    Addr: "10.31.80.147:6379"
+    Pwd: ""
+    DB: 0
+  OpenAI:
+    AuthKey: "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"
+    ChatCompletionsUrl: "https://api.openai.com/v1/chat/completions"
+    Model: "gpt-3.5-turbo"
+    Temperature: 0.6
+    MaxTokens: 400
+  Messenger:
+    AccessToken: "EAAYrQ9M4yC8BO7DcSu7BQYs3tQqVuLgMLCZCcmA0avoWE19TrwMuv8Rj2GbvibFkct9XsL3o4q9Yq43XRODuVC96cQQcmRpMxNWnU9kdZBuFgotZBHX2EZCty28KbUjD1t4R6iOvaGErBakZAVsYqLZCKpbUlnWOtbw9MXjR2RsYSN4GXSJgxNxyHtXw7WkRZBV"
+    VerifyToken: "hello"
+
+Prod:
+  Port: 8080
+  LogLevel: "debug"
+  DSN: ""
+  Cookie:
+    Domain: ".messengerBot.com"
+  Redis:
+    Addr: "10.31.80.147:6379"
+    Pwd: ""
+    DB: 0
+  OpenAI:
+    AuthKey: "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"
+    ChatCompletionsUrl: "https://api.openai.com/v1/chat/completions"
+    Model: "gpt-3.5-turbo"
+    Temperature: 0.6
+    MaxTokens: 400
+  Messenger:
+    AccessToken: "EAAYrQ9M4yC8BO7DcSu7BQYs3tQqVuLgMLCZCcmA0avoWE19TrwMuv8Rj2GbvibFkct9XsL3o4q9Yq43XRODuVC96cQQcmRpMxNWnU9kdZBuFgotZBHX2EZCty28KbUjD1t4R6iOvaGErBakZAVsYqLZCKpbUlnWOtbw9MXjR2RsYSN4GXSJgxNxyHtXw7WkRZBV"
+    VerifyToken: "hello"
